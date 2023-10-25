@@ -24,15 +24,18 @@
       aarch64-linux
     ];
   in
-    # Combine list of attribute sets together
-    nixpkgs.lib.foldr nixpkgs.lib.recursiveUpdate {} [
-      (flake-utils.lib.eachSystem systems (system: {
+    flake-utils.lib.eachSystem systems (
+      system: let
+        pkgs = import nixpkgs {
+          inherit system;
+        };
+      in {
+        packages.qemu-bpmp = nixpkgs.legacyPackages.${system}.callPackage ./qemu-bpmp {};
         formatter = nixpkgs.legacyPackages.${system}.alejandra;
-      }))
-
-      {
-        nixosModules.bpmp-virt-host = ./modules/bpmp-virt-host;
-        nixosModules.bpmp-virt-guest = ./modules/bpmp-virt-guest;
       }
-    ];
+    )
+    // {
+      nixosModules.bpmp-virt-host = import ./modules/bpmp-virt-host;
+      nixosModules.bpmp-virt-guest = import ./modules/bpmp-virt-guest;
+    };
 }
