@@ -11,10 +11,11 @@
       name = "Bpmp virtualization host proxy device tree";
       patch = ./patches/bpmp-host-proxy-dts.patch;
     }
-    {
-      name = "Bpmp virtualization host uarta device tree";
-      patch = ./patches/bpmp-host-uarta-dts.patch;
-    }
+    # FIXME: This patch doesn't wortk as is.
+    # {
+    #   name = "Bpmp virtualization host uarta device tree";
+    #   patch = ./patches/bpmp-host-uarta-dts.patch;
+    # }
     {
       name = "Bpmp virtualization host kernel configuration";
       patch = null;
