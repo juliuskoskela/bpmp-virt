@@ -25,8 +25,6 @@
     }
   ];
 
-  boot.kernelParams = ["vfio_iommu_type1.allow_unsafe_interrupts=1"];
-
   systemd.services.bindUARTA = {
     description = "Bind UARTA to the vfio-platform driver";
     wantedBy = ["multi-user.target"];
