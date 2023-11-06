@@ -1,5 +1,5 @@
 {config, ...}: {
-  pkgs.overlays = [import ../../overlays/qemu];
+  nixpkgs.overlays = [import ../../overlays/qemu];
 
   boot.kernelPatches = [
     {
