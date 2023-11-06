@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  imports = [./bpmp-virt-common];
+  imports = [../bpmp-virt-common];
 
   boot.kernelPatches = [
     {
