@@ -2,13 +2,13 @@
 # SPDX-License-Identifier: Apache-2.0
 {
   description = ''
-    The BPMP (Boot and Power Management Processor) virtualization allows the 
-    virtual machines (VMs) to access the BPMP resources (such as specific 
-    devices' clocks and resets) in order to passthrough platform devices where the 
+    The BPMP (Boot and Power Management Processor) virtualization allows the
+    virtual machines (VMs) to access the BPMP resources (such as specific
+    devices' clocks and resets) in order to passthrough platform devices where the
     drivers requires control of resets and clock configurations.
 
     - Host module: `bpmp-virt.nixosModules.bpmp-virt-host`
-      
+
     This module enables boot and power management processor (BPMP)
     virtualization on the host.
 

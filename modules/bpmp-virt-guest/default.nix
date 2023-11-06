@@ -1,8 +1,4 @@
-{
-  # config,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   imports = [../bpmp-virt-common];
 
   boot.kernelPatches = [
