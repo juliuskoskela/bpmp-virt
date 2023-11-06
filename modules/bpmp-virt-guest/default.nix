@@ -6,10 +6,11 @@
   imports = [../bpmp-virt-common];
 
   boot.kernelPatches = [
-    {
-      name = "Bpmp Guest Proxy Dts";
-      patch = ./patches/bpmp-guest-proxy-dts.patch;
-    }
+    # FIXME: This patch doesn't apply cleanly
+    # {
+    #   name = "Bpmp Guest Proxy Dts";
+    #   patch = ./patches/bpmp-guest-proxy-dts.patch;
+    # }
     {
       name = "BPMP virt enable guest";
       patch = null;
