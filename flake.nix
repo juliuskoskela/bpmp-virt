@@ -18,9 +18,13 @@
       aarch64-linux
     ];
   in
-    flake-utils.lib.eachSystem systems (system: {
-      formatter = nixpkgs.legacyPackages.${system}.alejandra;
-    })
+    flake-utils.lib.eachSystem systems (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        formatter = nixpkgs.legacyPackages.${system}.alejandra;
+      }
+    )
     // {
       nixosModules = {
         bpmp-virt-host = ./modules/bpmp-virt-host;
