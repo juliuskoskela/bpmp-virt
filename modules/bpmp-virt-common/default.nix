@@ -1,4 +1,7 @@
-{config, ...}: {
+{
+  # config,
+  ...
+}: {
   # FIXME: Qemu patch doesn't work at the moment
   # nixpkgs.overlays = [(import ../../overlays/qemu)];
 
