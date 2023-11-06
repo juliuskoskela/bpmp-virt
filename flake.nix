@@ -29,7 +29,7 @@
     flake-utils,
   }: let
     systems = with flake-utils.lib.system; [
-      x86_64-linux
+      # x86_64-linux
       aarch64-linux
     ];
   in
