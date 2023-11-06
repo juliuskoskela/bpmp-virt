@@ -1,7 +1,5 @@
 {
   config,
-  lib,
-  pkgs,
   ...
 }: {
   pkgs.overlays = [import ../../overlays/qemu];
