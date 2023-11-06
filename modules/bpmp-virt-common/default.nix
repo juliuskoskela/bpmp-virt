@@ -8,11 +8,11 @@
     }
     {
       name = "Vfio_platform Reset Required False";
-      patch = ./pacthes/vfio_platform-reset-required-false.patch;
+      patch = ./patches/vfio_platform-reset-required-false.patch;
     }
     {
       name = "Bpmp Support Virtualization";
-      patch = ./pacthes/bpmp-support-bpmp-virt.patch;
+      patch = ./patches/bpmp-support-bpmp-virt.patch;
     }
     {
       name = "Bpmp Virt Drivers";
